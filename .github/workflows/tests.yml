@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    actions:
+    steps:
       - name: checkout
        uses: actions/checkout@v1
       - name: run docker compose
