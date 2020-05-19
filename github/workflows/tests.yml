@@ -1,0 +1,14 @@
+name: Test Github CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    actions:
+      - name: checkout
+       uses: actions/checkout@v1
+      - name: run docker compose
+        run: docker-compose -f docker-compose.yml up --abort-on-container-exit --build
+
